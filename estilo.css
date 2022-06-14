@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-image: url('imagens/paracatu056.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    flex: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 40px white;
+}
+
+h2 {
+    color: #fff;
+}
+
+.logo h2 {
+    font-size: 4em;
+    margin: 0;
+    color: #ee8e08;
+}
+
+.logo h3 {
+    font-size: 2em;
+    margin: 0;
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+}
+
+.conteudo {
+    flex: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    position: sticky;
+    top: 0px;
+    /* height: 45px; */
+    /*width: 100%;*/
+    display: flex;
+    justify-content: space-between;
+    flex: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu li a:hover {
+    color: #ee8e08;
+    /*border-bottom: 3px solid transparent;*/
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+.menu li ul {
+    position: absolute;
+    padding: 0;
+    width: 200px;
+    display: none;
+    transition: 1s;
+}
+
+.menu li:hover ul {
+    display: block;
+    border-bottom: #ee8e08;
+}
+
+.menu li ul li {
+    display: block;
+}
+
+.titulo-animado {
+    animation-delay: 30ms;
+    opacity: 0;
+    text-align: center;
+}
+
+.corpo-animado {
+    animation-delay: 1s;
+    opacity: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.corpo-animado2 {
+    animation-delay: 1s;
+    opacity: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.animar-texto {
+    animation-name: texto-crescendo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes texto-crescendo {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+input[type=text] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+input[type=e-mail] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    margin: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #ee8e08;
+    background-image: linear-gradient(to top left,
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    color: #ee8e08;
+    background-color: #fff;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.redessociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    flex: 1;
+    gap: 50px;
+}
+
+.redessociais a {
+    color: #fff;
+    transition: 0.3s;
+    display: block;
+}
+
+.redessociais a:hover {
+    color: #ee8e08;
+    font-size: 1.4em;
+    transform: translateY(-20px);
+}
+
+.contato {
+    padding: 0 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: texto-crescendo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.contato label {
+    color: #fff;
+    font-weight: bold;
+}
+
+.contato p {
+    color: #fff;
+}
+
+.container-flex {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    width: 400px;
+    height: 200px;
+    max-width: 1200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.produto {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.button-as-link{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 30%;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ee8e08;
+    background-image: linear-gradient(to top left,
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.button-as-link:hover {
+    color: #ee8e08;
+    background-color: #fff;
+}
+
+.button-as-link:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.button-as-link a{
+    text-decoration: none;
+    color: #fff;
+}
+.aluno{
+    color: #fff;
+}
+
+span{
+    margin: 20px;
+    padding: auto;
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+span :first-child{
+    animation-name: texto-crescendo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+span :last-child{
+    animation-name: texto-crescendo;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    justify-content: center;
+}
+mark{
+    background-color: #ee8e08;
+}
